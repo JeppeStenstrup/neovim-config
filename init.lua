@@ -4,5 +4,5 @@ require("core.lazy")
 -- Keymaps
 require("core.keymaps")
 
--- Options
+-- Vim Options
 require("core.options")
