@@ -58,5 +58,9 @@ map("n", "<leader>ut", function()
 	end
 end, "Toggle between light and dark themes")
 
+-- Oil
+map("n", "<leader>o", ":Oil<CR>")
+
 -- Clear after search
+map("n", "<Esc><Esc>", ":let @/ = \"\"<CR>")
 map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
