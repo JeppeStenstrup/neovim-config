@@ -26,7 +26,8 @@ return {
           config = {
             workspaces = {
               notes = "~/notes",
-              discrete_math = "~/notes/discrete_mathematics/"
+              discrete_math = "~/notes/discrete_mathematics/",
+              daily_planning = "~/notes/daily_planning/"
             },
             default_workspace = "notes"
           },

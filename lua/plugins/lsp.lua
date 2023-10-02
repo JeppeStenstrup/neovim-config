@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"j-hui/fidget.nvim",
+--			"j-hui/fidget.nvim",
 			"folke/neodev.nvim",
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
@@ -15,7 +15,7 @@ return {
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
+--					"lua_ls",
 				},
 				automatic_installation = true,
 			})
@@ -27,10 +27,10 @@ return {
 			require("neodev").setup()
 
 			-- Turn on LSP status information
-			require("fidget").setup()
+--			require("fidget").setup()
 
 			-- Set up cool signs for diagnostics
-			local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+			local signs = { Error = "E ", Warn = "W ", Hint = "H ", Info = "I " }
 			for type, icon in pairs(signs) do
 				local hl = "DiagnosticSign" .. type
 				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -38,7 +38,7 @@ return {
 
 			-- Diagnostic config
 			local config = {
-				virtual_text = false,
+				virtual_text = true,
 				signs = {
 					active = signs,
 				},
@@ -87,26 +87,26 @@ return {
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 			-- Lua
-			require("lspconfig")["lua_ls"].setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					Lua = {
-						completion = {
-							callSnippet = "Replace",
-						},
-						diagnostics = {
-							globals = { "vim" },
-						},
-						workspace = {
-							library = {
-								[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-								[vim.fn.stdpath("config") .. "/lua"] = true,
-							},
-						},
-					},
-				},
-			})
+--			require("lspconfig")["lua_ls"].setup({
+--				on_attach = on_attach,
+--				capabilities = capabilities,
+--				settings = {
+--					Lua = {
+--						completion = {
+--							callSnippet = "Replace",
+--						},
+--						diagnostics = {
+--							globals = { "vim" },
+--						},
+--						workspace = {
+--							library = {
+--								[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+--								[vim.fn.stdpath("config") .. "/lua"] = true,
+--							},
+--						},
+--					},
+--				},
+--			})
 		end,
 	},
 }
