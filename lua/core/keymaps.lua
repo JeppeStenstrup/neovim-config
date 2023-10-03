@@ -1,7 +1,8 @@
 local map = require("helpers.keys").map
 
--- Blazingly fast way out of insert mode
-map("i", "jk", "<esc>")
+-- Scrolling
+map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-d>", "<C-d>zz")
 
 -- Quick access to some common actions
 map("n", "<leader>fw", "<cmd>w<cr>", "Write")

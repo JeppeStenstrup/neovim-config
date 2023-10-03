@@ -7,6 +7,7 @@ local opts = {
 	number = true,
 	relativenumber = true,
 	conceallevel = 3,
+	scrolloff = 5,
 	--nofoldable = true,
 }
 
