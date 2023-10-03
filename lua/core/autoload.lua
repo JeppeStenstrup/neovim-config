@@ -1,13 +1,6 @@
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
-augroup("startup_plugs", { clear = true })
-autocmd("VimEnter", {
-	group = "startup_plugs",
-	command = "ZenMode",
-	pattern = "*",
-})
-
 augroup("buf_new_file", { clear = true })
 autocmd("BufNewFile", {
 	group = "buf_new_file",
