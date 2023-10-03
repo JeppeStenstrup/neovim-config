@@ -5,7 +5,7 @@ augroup('buf_new_file', { clear = true })
 autocmd('BufNewFile', {
 	group = "buf_new_file",
 	command = "Neorg templates load journal",
-	pattern = { "**/*.norg" },
+	pattern = { os.getenv("HOME") .. "/notes/journal/*" },
 })
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
