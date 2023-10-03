@@ -1,0 +1,12 @@
+@document.meta
+description:
+authors: {AUTHOR}
+categories:
+created: {TODAY}
+@end
+
+* {TODAY}
+** Personal 
+   - ( ) {CURSOR}
+** Work
+   - ( )

@@ -1,7 +1,10 @@
 return {
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { "pysan3/neorg-templates", dependencies = { "L3MON4D3/LuaSnip" } },
+  },
   config = function()
     require("neorg").setup({
       load = {
@@ -35,11 +38,18 @@ return {
         ["core.esupports.indent"] = {},
         ["core.qol.toc"] = {},
         ["core.qol.todo_items"] = {},
+        ["core.journal"] = {
+          config = {
+            template_name = "template.norg"
+          }
+        },
         ["core.keybinds"] = {
           config = {
             keybind_preset = "neorg"
           }
-        }
+        },
+        ["core.itero"] = {},
+        ["external.templates"] = {},
       },
     })
   end,
