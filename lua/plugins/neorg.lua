@@ -45,8 +45,6 @@ return {
           }
         },
         ["core.itero"] = {},
-        ["core.ui"] = {},
-        ["core.ui.calendar"] = {},
         ["external.templates"] = {},
       },
     })
