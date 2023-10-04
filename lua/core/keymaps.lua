@@ -65,3 +65,14 @@ map("n", "<leader>o", ":Oil<CR>")
 -- Clear after search
 map("n", "<Esc><Esc>", ":let @/ = \"\"<CR>")
 map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
+
+-- LSP
+map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+
+-- Trouble
+map("n", "<leader>xx", function() require("trouble").open() end)
+map("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end)
+map("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end)
+map("n", "<leader>xq", function() require("trouble").open("quickfix") end)
+map("n", "<leader>xl", function() require("trouble").open("loclist") end)
+map("n", "gR", function() require("trouble").open("lsp_references") end)
