@@ -29,9 +29,10 @@ return {
           config = {
             workspaces = {
               notes = "~/notes",
+              journal = "~/notes/journal",
               discrete_math = "~/notes/discrete_mathematics/"
             },
-            default_workspace = "notes"
+            default_workspace = "journal"
           },
         },
         ["core.esupports.hop"] = {},
