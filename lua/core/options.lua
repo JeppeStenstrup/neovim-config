@@ -6,7 +6,7 @@ local opts = {
 	termguicolors = true,
 	number = true,
 	relativenumber = true,
-	conceallevel = 3,
+	conceallevel = 0,
 	scrolloff = 5,
 	--nofoldable = true,
 }

@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 -- Highlight, edit, and navigate code
 return {
 	{

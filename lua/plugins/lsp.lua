@@ -16,7 +16,11 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver"
+					"tsserver",
+					"clangd",
+					"omnisharp",
+					"gopls",
+					"ocamllsp"
 				},
 				automatic_installation = true,
 			})
@@ -28,7 +32,7 @@ return {
 			require("neodev").setup()
 
 			-- Turn on LSP status information
-			require("fidget").setup()
+			-- require("fidget").setup()
 
 			-- Set up cool signs for diagnostics
 			local signs = {
@@ -116,6 +120,32 @@ return {
 			})
 
 			require("lspconfig")["tsserver"].setup({
+				on_attach = on_attach,
+				capabilities = capabilities
+			})
+
+			require("lspconfig")["clangd"].setup({
+				on_attach = on_attach,
+				capabilities = capabilities
+			})
+
+			require("lspconfig")["gopls"].setup({
+				on_attach = on_attach,
+				capabilities = capabilities
+			})
+
+			require("lspconfig")["omnisharp"].setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				cmd = { "/home/pastasauce/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp" },
+				organize_imports_on_format = true,
+				enable_roslyn_analyzers = true,
+				root_dir = function ()
+					return vim.loop.cwd() -- current working directory
+				end,
+			})
+
+			require("lspconfig")["ocamllsp"].setup({
 				on_attach = on_attach,
 				capabilities = capabilities
 			})
