@@ -68,6 +68,7 @@ map("n", "<leader>ur", "<cmd>nohl<cr>", "Clear highlights")
 
 -- LSP
 map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 
 -- Trouble
 map("n", "<leader>xx", function() require("trouble").open() end)
