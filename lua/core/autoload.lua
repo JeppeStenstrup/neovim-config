@@ -9,6 +9,7 @@ autocmd("BufNewFile", {
 })
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gg", ":vert rightbelow terminal git log --oneline --decorate --graph --all<CR>")
 
 augroup("git", { clear = true })
 autocmd("BufWinEnter", {
