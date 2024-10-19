@@ -78,7 +78,5 @@ map("n", "<leader>xq", function() require("trouble").open("quickfix") end)
 map("n", "<leader>xl", function() require("trouble").open("loclist") end)
 map("n", "gR", function() require("trouble").open("lsp_references") end)
 
-map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 -- TMUX
 map("n", "<leader>tt", "<cmd>silent !tmux new-window -c $PWD<CR>");

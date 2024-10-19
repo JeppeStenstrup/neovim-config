@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"j-hui/fidget.nvim",
+			--"j-hui/fidget.nvim",
 			"folke/neodev.nvim",
 			"RRethy/vim-illuminate",
 			"hrsh7th/cmp-nvim-lsp",
